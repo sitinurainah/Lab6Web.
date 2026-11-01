@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Workshop | Modul 7</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <p class="prodi">Program Studi Teknik Informatika</p>
+            <h1 id="judul">Pendaftaran Workshop</h1>
+            <p class="modul">Modul Praktikum Pemrograman Web • Pertemuan 7</p>
+        </header>
+
+        <section class="card">
+            <h2>Formulir Peserta</h2>
+            <form id="formPendaftaran" novalidate>
+                <div class="field">
+                    <label for="nama">Nama lengkap</label>
+                    <input type="text" id="nama" maxlength="40" placeholder="Masukkan nama Anda">
+                    <p class="ringkasan">Jumlah karakter: <span id="jumlahKarakter">0</span>/40</p>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="nama@example.com">
+                </div>
+
+                <div class="field">
+                    <label for="sesi">Pilihan sesi</label>
+                    <select id="sesi">
+                        <option value="">-- Pilih sesi --</option>
+                        <option value="HTML & CSS Dasar">HTML &amp; CSS Dasar</option>
+                        <option value="JavaScript DOM">JavaScript DOM</option>
+                        <option value="Pengembangan Web Responsif">Pengembangan Web Responsif</option>
+                    </select>
+                    <p id="ringkasanSesi" aria-live="polite">Belum ada sesi dipilih.</p>
+                </div>
+
+                <p id="pesanForm" class="pesan" aria-live="polite"></p>
+                <div class="aksi">
+                    <button type="submit" id="tombolDaftar">Daftar Workshop</button>
+                    <button type="reset" id="tombolReset" class="secondary">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <div class="judul-paragraf">
+                <h2>Informasi Workshop</h2>
+                <button type="button" id="tombolParagraf">Sembunyikan</button>
+            </div>
+            <p id="paragrafWorkshop">Workshop dilaksanakan secara interaktif melalui praktik langsung dan diskusi.</p>
+        </section>
+
+        <section class="card">
+            <h2>To-do List</h2>
+            <div class="todo-input">
+                <input type="text" id="inputTugas" placeholder="Tulis tugas baru">
+                <button type="button" id="tambahTugas">Tambah</button>
+            </div>
+            <p id="pesanTugas" class="pesan" aria-live="polite"></p>
+            <ul id="daftarTugas"></ul>
+        </section>
+    </main>
+</body>
+</html>

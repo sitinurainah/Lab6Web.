@@ -1,0 +1,104 @@
+* { box-sizing: border-box; }
+
+:root {
+    --biru: #2563eb;
+    --biru-tua: #1e40af;
+    --krem: #f8fafc;
+    --teks: #1e293b;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: var(--teks);
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.container {
+    width: min(760px, calc(100% - 32px));
+    margin: 32px auto;
+}
+
+header { text-align: center; margin-bottom: 20px; }
+header h1 { margin: 6px 0; color: var(--biru-tua); }
+.prodi, .modul { margin: 0; color: #475569; }
+.modul { margin-top: 6px; font-size: 0.9rem; }
+
+.card {
+    margin-bottom: 18px;
+    padding: 20px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(30, 64, 175, 0.1);
+}
+
+.card h2 { margin-top: 0; color: var(--biru-tua); }
+.field { margin-bottom: 14px; }
+label { display: block; margin-bottom: 6px; font-weight: bold; }
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font: inherit;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #93c5fd;
+    border-color: var(--biru);
+}
+
+.ringkasan, #ringkasanSesi { margin: 6px 0 0; font-size: 0.85rem; color: #64748b; }
+.aksi { display: flex; gap: 10px; }
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 14px;
+    color: white;
+    background: var(--biru);
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover { background: var(--biru-tua); }
+button.secondary { background: #64748b; }
+
+.pesan {
+    min-height: 22px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.error { color: #b91c1c; }
+.success { color: #15803d; }
+.info { color: #475569; }
+
+.judul-paragraf {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.hidden { display: none; }
+
+.todo-input { display: flex; gap: 8px; }
+.todo-input input { flex: 1; }
+#daftarTugas { list-style: none; padding: 0; }
+#daftarTugas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+    padding: 9px;
+    border-radius: 6px;
+    background: var(--krem);
+}
+.hapus-tugas { padding: 7px 10px; background: #dc2626; }
+.hapus-tugas:hover { background: #991b1b; }
+
+@media (max-width: 500px) {
+    .container { width: calc(100% - 20px); margin-top: 20px; }
+    .aksi, .todo-input { flex-direction: column; }
+    .judul-paragraf { align-items: flex-start; }
+}
